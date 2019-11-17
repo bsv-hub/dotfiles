@@ -1,0 +1,6 @@
+[ranger] open file with Ranger
+[set softwrap on] Softwrap on
+[set softwrap off] Softwrap off
+[vsplit] Vertical split
+[hsplit] Horizontal split
+[tab] New empty tab

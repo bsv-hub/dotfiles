@@ -1,0 +1,10 @@
+{
+    "colorscheme": "cmc-16",
+    "diffgutter": true,
+    "fastdirty": true,
+    "ignorecase": false,
+    "pluginchannels": [
+        "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
+    ],
+    "pluginrepos": []
+}
