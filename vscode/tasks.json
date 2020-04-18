@@ -1,0 +1,47 @@
+ {
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "runCurrentTest",
+            "type": "shell",
+            "command": "make app-test-file T=$(echo ${relativeFile} | cut -c 14-)",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated",
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "runAllTests",
+            "type": "shell",
+            "command": "make app-test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated"
+            },
+        },
+        {
+            "label": "app-fixture-prepare",
+            "type": "shell",
+            "command": "make app-fixture-prepare",
+            // "promptOnClose": false,
+            "presentation": {
+                // "echo": true,
+                // "reveal": "silent",
+                // "focus": true,
+                // "panel": "dedicated"
+            },
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "editor.minimap.enabled": false,
+    "files.autoSave": "onFocusChange",
+    "terminal.integrated.copyOnSelection": true,
+    "workbench.sideBar.location": "left",
+    "workbench.activityBar.visible": true,
+    "search.searchOnTypeDebouncePeriod": 400,
+    "search.showLineNumbers": true,
+    "editor.snippetSuggestions": "top",
+    "files.trimTrailingWhitespace": true,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "workbench.editor.showTabs": true,
+    "editor.renderControlCharacters": false,
+    "editor.renderWhitespace": "all",
+    "extensions.ignoreRecommendations": false,
+    "terminal.integrated.scrollback": 1200,
+    "window.zoomLevel": 0,
+    "terminal.integrated.rightClickBehavior": "copyPaste",
+    "diffEditor.renderSideBySide": true,
+    "[makefile]": {
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": false
+    },
+    "files.insertFinalNewline": true,
+    "diffEditor.ignoreTrimWhitespace": false
+}
