@@ -23,5 +23,32 @@
         "editor.detectIndentation": false
     },
     "files.insertFinalNewline": true,
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.enableExperiments": false,
+    "problems.showCurrentInStatus": true,
+    "editor.copyWithSyntaxHighlighting": false,
+    "search.quickOpen.history.filterSortOrder": "recency",
+    "editor.wordSeparators": "`~!#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+    "aceJump.finder.onlyInitialLetter": false,
+    "aceJump.finder.skipSelection": true,
+    "aceJump.placeholder.upperCase": true,
+    "git.enableSmartCommit": true,
+    "git.smartCommitChanges": "tracked",
+    "git.suggestSmartCommit": false,
+    "aceJump.finder.includeEndCharInSelection": false,
+    "bookmarks.sideBar.expanded": true,
+    "explorer.autoReveal": false,
+    "cSpell.enableFiletypes": [
+        "!java",
+        "!rust",
+        "!scala",
+        "!scss",
+        "haml",
+        "ruby"
+    ],
+    "cSpell.language": "en,ru",
+    "cSpell.userWords": [
+        "cpath"
+    ],
+    "githd.logView.displayExpressStatus": false
 }

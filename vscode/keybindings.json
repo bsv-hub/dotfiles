@@ -105,7 +105,7 @@
     {
         "key": "alt+right",
         "command": "workbench.action.nextEditor",
-        "when": "editorTextFocus"
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+pagedown",
@@ -114,7 +114,7 @@
     {
         "key": "alt+left",
         "command": "workbench.action.previousEditor",
-        "when": "editorTextFocus"
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+pageup",
@@ -316,17 +316,46 @@
     {
         "key": "f5 f6",
         "command": "workbench.action.tasks.runTask",
-        "args": "runCurrentTest"
+        "args": "app-test-file"
     },
     {
         "key": "f5 f8",
         "command": "workbench.action.tasks.runTask",
-        "args": "runAllTests"
+        "args": "app-test"
     },
     {
         "key": "f5 f",
         "command": "workbench.action.tasks.runTask",
-        "args": "hexlet-app-fixture-prepare"
+        "args": "app-fixture-prepare"
+    },
+    {
+        "key": "f5 alt+f",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "make app-fixture-prepare\u000D",
+        }
+    },
+    {
+        "key": "f5 b",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "make app-bash\u000D",
+        }
+    },
+    {
+        "key": "f5 c",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "make app-rails-console\u000D" }
+    },
+    {
+        "key": "f5 m",
+        "command": "workbench.action.tasks.runTask",
+        "args": "migrate"
+    },
+    {
+        "key": "f5 alt+m",
+        "command": "workbench.action.tasks.runTask",
+        "args": "migrate-redo"
     },
     {
         "key": "alt+t",
@@ -409,5 +438,184 @@
     {
         "key": "f5 f5",
         "command": "workbench.action.tasks.reRunTask"
+    },
+    {
+        "key": "f2 h",
+        "command": "timeline.focus"
+    },
+    {
+        "key": "alt+meta+left",
+        "command": "workbench.action.moveEditorLeftInGroup"
+    },
+    {
+        "key": "ctrl+shift+pageup",
+        "command": "-workbench.action.moveEditorLeftInGroup"
+    },
+    {
+        "key": "alt+meta+right",
+        "command": "workbench.action.moveEditorRightInGroup"
+    },
+    {
+        "key": "ctrl+shift+pagedown",
+        "command": "-workbench.action.moveEditorRightInGroup"
+    },
+    {
+        "key": "alt+f8",
+        "command": "-editor.action.marker.next",
+        "when": "editorFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+i",
+        "command": "editor.action.marker.next"
+    },
+    {
+        "key": "shift+alt+f8",
+        "command": "-editor.action.marker.prev",
+        "when": "editorFocus && !editorReadonly"
+    },
+    {
+        "key": "f2 left",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+left",
+        "command": "-workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "f2 right",
+        "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+right",
+        "command": "-workbench.action.focusRightGroup"
+    },
+    {
+        "key": "f2 up",
+        "command": "workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+up",
+        "command": "-workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "f2 down",
+        "command": "workbench.action.focusBelowGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+down",
+        "command": "-workbench.action.focusBelowGroup"
+    },
+    {
+        "key": "f2 pagedown",
+        "command": "workbench.action.focusNextGroup"
+    },
+    {
+        "key": "f2 pageup",
+        "command": "workbench.action.focusPreviousGroup"
+    },
+    {
+        "key": "f2 b",
+        "command": "breadcrumbs.focus",
+        "when": "breadcrumbsPossible"
+    },
+    {
+        "key": "ctrl+shift+;",
+        "command": "-breadcrumbs.focus",
+        "when": "breadcrumbsPossible"
+    },
+    {
+        "key": "alt+k",
+        "command": "-keybindings.editor.recordSearchKeys",
+        "when": "inKeybindings && inKeybindingsSearch"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "workbench.action.terminal.focusFindWidget",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFindWidget",
+        "when": "terminalFindWidgetFocused || terminalFocus"
+    },
+    {
+        "key": "f2 alt+right",
+        "command": "workbench.action.moveEditorToRightGroup"
+    },
+    {
+        "key": "f2 alt+left",
+        "command": "workbench.action.moveEditorToLeftGroup"
+    },
+    {
+        "key": "f2 alt+up",
+        "command": "workbench.action.moveEditorToAboveGroup"
+    },
+    {
+        "key": "f2 alt+down",
+        "command": "workbench.action.moveEditorToBelowGroup"
+    },
+    {
+        "key": "alt+.",
+        "command": "editor.action.addSelectionToNextFindMatch"
+    },
+    {
+        "key": "alt+,",
+        "command": "editor.action.addSelectionToPreviousFindMatch"
+    },
+    {
+        "key": "alt+m",
+        "command": "editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "-editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+l",
+        "command": "-toggleFindInSelection",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+l",
+        "command": "-toggleSearchEditorContextLines",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "alt+d",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+l",
+        "command": "extension.aceJump.line"
+    },
+    {
+        "key": "alt+s",
+        "command": "extension.aceJump.selection"
+    },
+    {
+        "key": "alt+j",
+        "command": "extension.aceJump"
+    },
+    {
+        "key": "alt+b",
+        "command": "bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "-bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+meta+b",
+        "command": "bookmarks.toggleLabeled"
     }
 ]
