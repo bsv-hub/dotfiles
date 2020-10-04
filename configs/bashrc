@@ -14,5 +14,3 @@ alias gpr='git pull --rebase origin master'
 alias g2ob='git push origin $(git branch --show-current)'
 alias pull='git pull '
 alias stash='git stash '
-
-alias he='cd ~/hexlet'
