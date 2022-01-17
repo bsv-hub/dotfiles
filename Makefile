@@ -1,4 +1,4 @@
-install: apt-install snap-install
+install: copy-configs-to-system apt-install snap-install
 
 # ranger tig tmux
 apt-install:
