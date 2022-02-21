@@ -1,15 +1,18 @@
-install: copy-configs-to-system apt-install snap-install
+install: copy-configs-to-system install-essentials
 
-# ranger tig tmux
-apt-install:
+# ranger tig tmux youtube-dl 
+install-essentials:
+	sudo add-apt-repository ppa:neovim-ppa/stable
+	sudo apt update
+	sudo apt -y install curl ansible \
+		apt-transport-https ca-certificates software-properties-common build-essential \
+		tmux neovim ncdu tldr fzf \
+
+install-chrome:
 	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 	sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 	sudo apt update
-	sudo apt -y install curl ansible \
-		apt-transport-https ca-certificates software-properties-common \
-		youtube-dl \
-		tmux neovim ncdu tldr fzf \
-		google-chrome-stable
+	sudo apt -y install google-chrome-stable
 
 copy-configs-from-system:
 	mkdir -p .config/Code/User/snippets/ \
@@ -31,6 +34,10 @@ copy-configs-to-system:
 	cp -R .config/ ~/.config/
 	mkdir -p ~/.config/Code/User/snippets/ \
 		&& cp -R .config/Code/User/ ~/.config/Code/
+
+setup-nvim:
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+		~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 ripgrep-workaround:
 	apt-get download ripgrep

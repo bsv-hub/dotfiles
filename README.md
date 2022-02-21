@@ -1,5 +1,6 @@
 ## Установка
 ```bash
+git clone --depth 1 --branch v2 https://github.com/bsv-hub/dotfiles.git
 make
 ```
 
