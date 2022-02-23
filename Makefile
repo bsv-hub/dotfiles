@@ -1,12 +1,12 @@
 install: copy-configs-to-system install-essentials
 
-# ranger tig tmux youtube-dl 
+# ranger tig tmux youtube-dl fzf
 install-essentials:
 	sudo add-apt-repository ppa:neovim-ppa/stable
 	sudo apt update
 	sudo apt -y install curl ansible \
 		apt-transport-https ca-certificates software-properties-common build-essential \
-		tmux neovim ncdu tldr fzf \
+		tmux neovim ncdu tldr
 
 install-chrome:
 	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
