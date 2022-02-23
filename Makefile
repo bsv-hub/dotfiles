@@ -29,6 +29,10 @@ copy-configs-from-system:
 	cp -R ~/.config/ranger/ .config/
 	cp -R ~/.config/tmux .config/
 	cp ~/.config/starship.toml .config/
+	
+setup-nvim:
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+ 		~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 copy-configs-to-system:
 	cp -R .config/ ~/.config/
