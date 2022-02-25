@@ -1,6 +1,7 @@
 vim.opt.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
 
 vim.opt.expandtab = true
+vim.opt.ts = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 
