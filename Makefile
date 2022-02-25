@@ -6,6 +6,7 @@ install-essentials:
 	sudo apt update
 	sudo apt -y install curl ansible \
 		apt-transport-https ca-certificates software-properties-common build-essential \
+		bash-completion \
 		tmux neovim ncdu tldr
 
 install-chrome:
