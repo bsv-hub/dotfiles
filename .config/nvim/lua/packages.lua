@@ -26,14 +26,14 @@
       end
     }
 
-    use { "lukas-reineke/indent-blankline.nvim",
-        config = function()
-            require("indent_blankline").setup {
-                show_current_context = true,
-                -- show_current_context_start = true,
-            }
-        end
-    }
+  use { "lukas-reineke/indent-blankline.nvim",
+      config = function()
+          require("indent_blankline").setup {
+              show_current_context = true,
+              -- show_current_context_start = true,
+          }
+      end
+  }
 
   -- use 'hrsh7th/nvim-cmp'
   use { 'phpactor/phpactor',
@@ -60,44 +60,51 @@
   --     requires = { {'nvim-lua/plenary.nvim'} }
   -- }
  
-    use {
-      'nvim-telescope/telescope.nvim',
-      config = function()
-        require('telescope').setup{
-          defaults = {
-            sorting_strategy = "ascending",
-            mappings = {
-              -- restore default behavior
-              i = {
-                ['<C-u>'] = false,
-                ['<C-d>'] = false,
-              },
+  use {
+    'nvim-telescope/telescope.nvim',
+    config = function()
+      require('telescope').setup{
+        defaults = {
+          sorting_strategy = "ascending",
+          mappings = {
+            -- restore default behavior
+            i = {
+              ['<C-u>'] = false,
+              ['<C-d>'] = false,
             },
           },
-          pickers = {
-            buffers = {
-              ignore_current_buffer = true,
-              sort_mru = true
+        },
+        pickers = {
+          buffers = {
+            ignore_current_buffer = true,
+            sort_mru = true
+          }
+        },
+      }
+    end,
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
+
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+  use { 'nvim-treesitter/nvim-treesitter',
+        run = ":TSUpdate",
+        config = function()
+            require("nvim-treesitter.configs").setup {
+                ensure_installed = {
+                    "php",
+                    "javascript",
+                    "json",
+                    "bash",
+                    "go",
+                    "yaml"
+                },
+                highlight = {
+                    enable = true,
+                }
             }
-          },
-        }
-      end,
-      requires = { 'nvim-lua/plenary.nvim' }
-    }
-
-use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-
---   use { 'nvim-treesitter/nvim-treesitter',
---         run = ":TSUpdate",
---         config = function()
---             require("nvim-treesitter.configs").setup {
---                 ensure_installed = "maintained",
---                 highlight = {
---                     enable = true,
---                 }
---             }
---         end
---   }
+        end
+  }
 
   use {
     'hrsh7th/nvim-cmp',
