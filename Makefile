@@ -7,7 +7,7 @@ install-essentials:
 	sudo apt -y install curl ansible \
 		apt-transport-https ca-certificates software-properties-common build-essential \
 		bash-completion \
-		tmux neovim ncdu tldr
+		tmux neovim ncdu tldr ripgrep
 
 install-chrome:
 	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -55,7 +55,7 @@ bat-workaround:
 
 snap-install:
 	sudo snap install code --classic
-	sudo snap install slack --classic
+	# sudo snap install slack --classic
 	sudo snap install telegram-desktop --classic
 	sudo snap install vlc --classic
 	# sudo snap install sublime-text --classic
